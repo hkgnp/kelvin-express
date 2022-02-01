@@ -25,7 +25,6 @@ wax.setLayoutPath('./views/layouts');
 
     res.render('index', {
       points: decodedString,
-      locations: location,
     });
   });
 })();
@@ -33,3 +32,7 @@ wax.setLayoutPath('./views/layouts');
 app.listen(process.env.PORT || 7000, () =>
   console.log('Server is running! Woohoo!')
 );
+
+var input2 = window.location.href;
+
+input2.substring(input2.indexOf('/map/') + 6);
